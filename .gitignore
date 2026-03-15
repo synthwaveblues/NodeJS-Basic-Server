@@ -1,0 +1,24 @@
+Smart move. Keeping node_modules out of your repository is essential—it’s massive, and anyone who clones your project can just run npm install to get them back.
+
+Regarding Prettier, you usually want to keep your configuration files (like .prettierrc) so your team formats code the same way, but you should definitely ignore the local cache if it exists.
+1. Create the .gitignore file
+
+In the root of your project folder, create a new file named exactly .gitignore.
+2. Add these lines
+
+Copy and paste the following into that file:
+Plaintext
+
+# Dependencies
+node_modules/
+
+# Prettier cache
+.prettier_cache
+
+# Optional: Ignore environment variables (passwords/API keys)
+.env
+
+# Optional: Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
